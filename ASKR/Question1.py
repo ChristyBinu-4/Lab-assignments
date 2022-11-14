@@ -16,4 +16,3 @@ for i in subjects:
     maxMarkName = df['Name'].loc[df[i].idxmax()]
     maxMark = df[i].max()
     print(maxMarkName,maxMark, '\n')
-

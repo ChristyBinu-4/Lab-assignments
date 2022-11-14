@@ -16,4 +16,4 @@ for i in columnName:
     print(df[i].min())
 
 
-print("Mean value of each column",df.mean(),sep="\n")
+print("Mean value of each column :",df.mean(),sep="\n")
