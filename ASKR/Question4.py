@@ -1,7 +1,6 @@
 import pandas as pd 
 
 df = pd.read_csv("data.csv")
-col_array = []
 
 df_copy = df.copy()
 
