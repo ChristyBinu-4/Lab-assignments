@@ -1,5 +1,30 @@
 import pandas as pd
+from math import sqrt
 
-df = pd.read_csv("data.csv")
-print(df.to_string())
-print(df.std())
+def getMean(column):
+    sum = 0 
+    for i in column:
+        sum += i
+    mean = sum / len(column)
+    return mean
+
+def standard_deviation(column):
+    length = len(column)
+    mean = getMean(column)
+    sumDifference = 0
+    for i in column:
+        sumDifference += (i - mean) ** 2
+    standardDeviation = sqrt(sumDifference/(length-1)) 
+    return standardDeviation
+    
+
+
+file = pd.read_csv("data.csv")
+print(file)
+
+columns = file.columns
+
+for i in  columns:
+    if i == "Unnamed: 0":
+        continue
+    print(standard_deviation(file[i]))
