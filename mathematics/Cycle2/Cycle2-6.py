@@ -3,8 +3,7 @@ import numpy as np
 
 def MatrixMaker(rows, columns):
   a = []
-  for i in range(rows):
-    for j in range(columns):
+  for i in range(rows*columns):
       a.append(int(input(">")))
   a = np.array(a)
   a = a.reshape(rows, columns)
