@@ -1,4 +1,4 @@
-# Question 8:Find vector matrix multiplication 
+# Question 7:Find vector matrix multiplication 
 import numpy as np
 
 def MatrixMaker(rows, columns):
