@@ -32,7 +32,7 @@ df_copy = df.copy()
 categories = truthTable(df_copy['Species'])
 df_copy['Species'] = dataConverter(df_copy['Species'],categories)
 
-print("\non the below dataset : \n")
+print("\n on the below dataset : \n")
 
 for (number,item) in enumerate(categories):
   print(number," represents ", item)
