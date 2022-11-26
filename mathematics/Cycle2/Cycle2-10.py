@@ -31,10 +31,8 @@ vector = np.array(vector) #converting to vector
 #making diagonal matrix using vector
 for i in range(rows):
   for j in range(columns):
-    if i == j :
-      diagonalMatrix.append(vector[i])    
-    else :
-      diagonalMatrix.append(0)
+    if i == j :  diagonalMatrix.append(vector[i])    
+    else : diagonalMatrix.append(0)
 diagonalMatrix = np.array(diagonalMatrix)
 diagonalMatrix = diagonalMatrix.reshape(rows, columns)
 
