@@ -1,19 +1,32 @@
 import pandas as pd 
+from numpy import Inf
 
+def getMean(column):
+    sum = 0 
+    for i in column:
+        sum += i
+    mean = sum / len(column)
+    return mean
 
-columnName = []
+def getMin(column):
+    min = Inf
+    for i in column:
+        if i < min :
+            min = i
+    return min 
+
+def getMax(column):
+    max = 0 
+    for i in column:
+        if i > max :
+            max = i
+    return max
 
 df = pd.read_csv("data.csv")
 print(df.to_string())
 
-columnName = df.keys()
-
-print("\nmax value of each column :")
-for i in columnName:
-    print(df[i].max())
-print("\nmin value of each column : ")
-for i in columnName:
-    print(df[i].min())
-
-
-print("Mean value of each column :",df.mean(),sep="\n")
+print("Mean, Minimum and Maximum value  of each column :\n")
+for i in df.columns:
+        if i == "Unnamed: 0":
+            continue
+        print(i,getMean(df[i]),getMin(df[i]),getMax(df[i]),sep="||")
