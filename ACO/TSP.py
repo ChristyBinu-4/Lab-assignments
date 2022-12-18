@@ -5,7 +5,6 @@ def tsp(graph, startNode):
   vertex = []
   path = []
   V = len(graph)
-  print(V)
   for i in range(V):
     if i != startNode:
       vertex.append(i)
@@ -28,7 +27,7 @@ def tsp(graph, startNode):
 
 
 graph = [[0, 0, 0, 0, 0], [0, 0, 10, 15, 20], [0, 10, 0, 25, 25], [0, 15, 25, 0, 30], [0, 20, 25, 30, 0]]
-startNode = 0 
+startNode = 2
 Output = tsp(graph, startNode)
 
 print(f'Minimum cost for travelling : {Output[0]}')
