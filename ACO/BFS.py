@@ -1,7 +1,5 @@
-from collections import deque
-
 def BFS(graph, startVertex):
-  queue = deque([startVertex])
+  queue = [startVertex]
   visited = {}
   traversalList = []
 
@@ -9,7 +7,7 @@ def BFS(graph, startVertex):
     visited.update({i:False})
 
   while queue:
-    vertex = queue.popleft()
+    vertex = queue.pop(0)
     visited[vertex] = True
     traversalList.append(vertex)
 
