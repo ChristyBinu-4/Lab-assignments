@@ -1,8 +1,6 @@
 def DFS(graph, startVertex):
-  queue = [startVertex]
-  visited = {}
-  traversalList = []
-
+  queue, visited, traversalList = [startVertex], {}, []
+  
   for i in range(len(graph)):
     visited.update({i:False})
 

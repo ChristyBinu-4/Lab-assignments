@@ -2,9 +2,8 @@ from itertools import permutations
 from sys import maxsize
 
 def tsp(graph, startNode):
-  vertex = []
-  path = []
-  V = len(graph)
+  vertex, path, V = [], [], len(graph)
+
   for i in range(V):
     if i != startNode:
       vertex.append(i)
@@ -13,8 +12,8 @@ def tsp(graph, startNode):
   next_permutation = permutations(vertex)
 
   for permutation in next_permutation:
-    current_path_weight = 0
-    k = startNode
+    current_path_weight, k = 0, startNode
+
     for element in permutation :
       current_path_weight += graph[k][element]
       k = element

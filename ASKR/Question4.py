@@ -4,7 +4,6 @@ df = pd.read_csv("data.csv")
 
 df_copy = df.copy()
 
-
 for columns in df_copy.columns:
     condition = str(type(df_copy[columns][0]))
     if condition == "<class 'str'>":

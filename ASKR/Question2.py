@@ -9,9 +9,8 @@ def getMean(column):
     return mean
 
 def standard_deviation(column):
-    length = len(column)
-    mean = getMean(column)
-    sumDifference = 0
+    length, mean, sumDifference  = len(column), getMean(column), 0
+    
     for i in column:
         sumDifference += (i - mean) ** 2
     standardDeviation = sqrt(sumDifference/(length-1)) 
