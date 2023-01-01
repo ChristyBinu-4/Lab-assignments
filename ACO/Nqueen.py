@@ -30,9 +30,7 @@ def Nqueen(n):
         return False
 
 
-    board = []
-    for i in range(n * n):
-        board.append(0)
+    board = [0 for i in range(n * n)]
     board = np.array(board)
     board = board.reshape(n, n)
     firstRowIndex = 0

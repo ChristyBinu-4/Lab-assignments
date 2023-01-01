@@ -2,9 +2,7 @@
 import numpy as np
 
 def MatrixMaker(rows, columns):
-  a = []
-  for i in range(rows*columns):
-      a.append(int(input(">")))
+  a = [int(input("=>")) for i in range(rows * columns)]
   a = np.array(a)
   a = a.reshape(rows, columns)
   return a

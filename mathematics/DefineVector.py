@@ -1,9 +1,7 @@
 import numpy as np
-list = []
+
 print("Enter the values of vector : ")
-for i in range(3):
-    value = int(input())
-    list.append(value)
+list = [int(input()) for i in range(3)]
 
 vector1 = np.array(list)
 

@@ -1,17 +1,10 @@
 import numpy as np
 
-list1 = []
-list2 = []
-
 print("Enter the  values of first vector : ")
-for i in range(3):
-    value = int(input())
-    list1.append(value)
+list1 = [int(input()) for i in range(3)]
 
 print("Enter the values of second vector : ")
-for i in range(3):
-    value = int(input())
-    list2.append(value)
+list2 = [int(input()) for i in range(3)]
     
 vector1 = np.array(list1)
 vector2 = np.array(list2)

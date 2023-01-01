@@ -1,14 +1,10 @@
 import numpy as np
 from numpy import linalg as LA
 
-list1 = []
-n = int(input("Enter the number of values :"))
-dimension = int(input("Enter the number of values :"))
+dimension = int(input("Enter the dimension of matrix :"))
 
 print("Enter the values of  vector : ")
-for i in range(n):
-    value = int(input())
-    list1.append(value)
+list1 = [int(input()) for i in range(dimension ** 2)]
 
 array = np.array(list1)    
 a = array.reshape((dimension, dimension))

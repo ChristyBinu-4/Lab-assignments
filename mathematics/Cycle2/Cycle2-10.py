@@ -3,10 +3,7 @@
 import numpy as np
 
 def MatrixMaker(rows, columns):
-  a = []
-
-  for i in range(rows*columns):
-      a.append(int(input(">")))
+  a = [int(input("=>")) for i in range(rows * columns)]
   a = np.array(a)
   a = a.reshape(rows, columns)
   return a
@@ -21,14 +18,12 @@ matrix_1 = MatrixMaker(rows, columns)
 vector = []
 diagonalMatrix = [] 
 
-#extracting vector using loop
-for i in range(rows):
-  for j in range(columns):
-    if i == j : #checking the diagonal element
-      vector.append(matrix_1[i][j])
+#extracting vector using loop that  only iterates the diagonal elements 
+vector = [matrix_1[i][j] for i, j in zip(range(rows) ,range(columns))]
 vector = np.array(vector) #converting to vector
 
 #making diagonal matrix using vector
+
 for i in range(rows):
   for j in range(columns):
     if i == j :  diagonalMatrix.append(vector[i])    

@@ -2,13 +2,8 @@ import numpy as np
 from numpy.linalg import norm
 from numpy import inf
 
-list1 = []
-
-
 print("Enter the values of  vector : ")
-for i in range(3):
-    value = int(input())
-    list1.append(value)
+list1 = [int(input()) for i in range(3)]
     
 vector1 = np.array(list1)
 
