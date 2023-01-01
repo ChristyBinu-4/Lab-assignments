@@ -15,7 +15,6 @@ print(f"Enter the elements of the first {rows}x{columns} matrix")
 matrix_1 = MatrixMaker(rows, columns)
 
 # extracting vector and making diagonal matrix
-vector = []
 diagonalMatrix = [] 
 
 #extracting vector using loop that  only iterates the diagonal elements 
@@ -23,7 +22,6 @@ vector = [matrix_1[i][j] for i, j in zip(range(rows) ,range(columns))]
 vector = np.array(vector) #converting to vector
 
 #making diagonal matrix using vector
-
 for i in range(rows):
   for j in range(columns):
     if i == j :  diagonalMatrix.append(vector[i])    

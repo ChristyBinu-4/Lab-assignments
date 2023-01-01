@@ -1,22 +1,16 @@
 # Question 6 : Find the product of two matrices
 import numpy as np
 
-def MatrixMaker(rows, columns):
-  a = [int(input("=>")) for i in range(rows * columns)]
-  a = np.array(a)
-  a = a.reshape(rows, columns)
-  return a
-
 rows = int(input("Enter the number of rows in first Matrix : "))
 columns = int(input("Enter the number of columns in first Matrix : "))
 
 column_2 = int(input("Enter the number of columns in Second Matrix : "))
 
 print(f"Enter the elements of the first {rows} x {columns} matrix")
-matrix_1 = MatrixMaker(rows, columns)
+matrix_1 = [[int(input("=>")) for j in range(columns)] for i in range(rows)]
 
 print(f"Enter the elements of the second {columns} x {column_2} matrix")
-matrix_2 = MatrixMaker(columns, column_2)
+matrix_2 = [[int(input("=>")) for j in range(column_2)] for i in range(columns)]
 
 print("first Matrix \n",matrix_1)
 print("Second Matrix \n", matrix_2)
