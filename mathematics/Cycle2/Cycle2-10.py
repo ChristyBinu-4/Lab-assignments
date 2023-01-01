@@ -26,6 +26,8 @@ for i in range(rows):
   for j in range(columns):
     if i == j :  diagonalMatrix.append(vector[i])    
     else : diagonalMatrix.append(0)
+#You can use a single line code for making diagonal matrix 
+#diagonalMatrix = [matrix[i][j] if i==j else 0  for i, j in  [(i, j) for i in range(rows) for j in range(columns)]]   
 diagonalMatrix = np.array(diagonalMatrix)
 diagonalMatrix = diagonalMatrix.reshape(rows, columns)
 
