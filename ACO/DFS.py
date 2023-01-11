@@ -18,4 +18,4 @@ def DFS(graph, startVertex):
   return traversalList
 
 graph = { 0:[1, 2, 3], 1:[0, 2], 2:[0, 1, 4], 3:[0], 4:[2]}
-print(DFS(graph,0))
+print(DFS(graph,2))
