@@ -23,7 +23,7 @@ def tsp(graph, startNode):
     print('Minimum cost of Path', permutation, 'is', current_path_weight)
 
     if min_path_weight > current_path_weight:
-      path.clear()
+      path.clear()#clear the path if minimum weight is found which less than current minimum 
       min_path_weight = current_path_weight
       path.append(permutation)
     elif min_path_weight == current_path_weight:
