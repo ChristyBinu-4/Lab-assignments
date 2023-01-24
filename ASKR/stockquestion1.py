@@ -8,13 +8,4 @@ df = df.dropna()
 
 dfResample = df.resample('15min').ohlc()
 
-# ohlc = {
-#     'open' : 'first',
-#     'high' : 'max',
-#     'low'  : 'min',
-#     'close': 'last',
-#     'volume': 'sum'
-# }
-
-# dfResample = df.resample('5min', base=15).apply(ohlc)
 print(dfResample)
