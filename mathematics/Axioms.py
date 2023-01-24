@@ -27,6 +27,7 @@ while run:
   ''')
   choice = int(input('Enter your choice => '))
   match(choice):
+
     case 1 :
       print('vector U : ')
       u = read_vector()
@@ -44,6 +45,7 @@ while run:
       Hence proved
       ''')
       input("press Enter to continue")
+
     case 2 :
       print('vector U : ')
       u = read_vector()
@@ -58,6 +60,7 @@ while run:
       Hence proved
       ''')
       input("press Enter to continue")
+      
     case 3 :
       print('vector V : ')
       v = read_vector()
@@ -70,6 +73,7 @@ while run:
       Hence proved
       ''')
       input("press Enter to continue")
+
     case 4 :
 
       print('vector V : ')
@@ -132,6 +136,7 @@ while run:
       Therefore C1 * (C2 * V) =  (C1 * C2) * V
       Hence proved
       ''')     
+      input("press Enter to continue")
 
     case 8 :
       print('vector V : ')
