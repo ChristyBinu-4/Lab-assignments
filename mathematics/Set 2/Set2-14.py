@@ -38,10 +38,10 @@ def determinantOfMatrix(matrix, dimension):
         determinant -= matrix[0][k] * determinantOfMatrix(array, dimension2)
   return determinant
 
-
-matrix = [2, 3, 5, 1, 7, 8, 9, 7, 2]
+dimension = int(input("Enter the no.of rows or columns in Matrix : "))
+print('Enter the values of matrix')
+matrix = [int(input()) for i in range(dimension**2)]
 matrix = np.array(matrix)
-dimension = int(sqrt(len(matrix)))
 matrix = matrix.reshape(dimension, dimension)
 
 print("Elements of matrix:\n",matrix)
