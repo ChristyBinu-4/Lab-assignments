@@ -14,3 +14,9 @@ MinimumValue = dfResample[('TATAMOTORSEQN', 'low')].min()
 
 print("The maximum value of stock is : ", MaximumValue)
 print("The minimum value of stock is : ", MinimumValue)
+
+timestampOfMaxValue = dfResample.index[dfResample[('TATAMOTORSEQN', 'high')] == MaximumValue][0]
+timestampOfMinValue = dfResample.index[dfResample[('TATAMOTORSEQN', 'low')] == MinimumValue][0]
+
+print("The Timestamp of maximum value  stock is : ", timestampOfMaxValue)
+print("The Timestamp of minimum value  stock is : ", timestampOfMinValue)
