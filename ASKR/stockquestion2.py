@@ -8,6 +8,23 @@
 import pandas as pd
 
 
+#Function for finding trend of a stock 
+def trend_Finder(stock):
+  stockName = stock.columns[0][0]
+  
+  dataLength = len(dfResample.index)
+  
+  openValue = stock[(stockName, 'open')][0]
+  closingValue = stock[(stockName, 'close')][dataLength - 1]
+
+  if openValue > closingValue :
+    return "Bullish trend"
+  elif closingValue > openValue:
+    return "Bearish trend"
+  else :
+    return "neutral"
+  
+
 #Function for finding average of movements of multiple candles
 def find_average_of_candles(no_of_Candles, dfResample):
   stockName = dfResample.columns[0][0]
@@ -49,6 +66,9 @@ for stock in [stock_tata, stock_reliance]:
   print("Date : ", date, "\n")
 
   dfResample = stock.resample('5min').ohlc()
+
+  #To print the trend of stock
+  print("Trend of stock : ", trend_Finder(dfResample))
 
   # To print moving average of five candles
   print("Moving average of five candles in a stock is : {: .2f}".format(find_average_of_candles(5, dfResample)))
