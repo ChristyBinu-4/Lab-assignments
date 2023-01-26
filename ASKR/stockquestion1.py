@@ -46,6 +46,7 @@ def findCandleWithMaxMove(dfResample):
 stock_tata = pd.read_csv("https://raw.githubusercontent.com/ChristyBinu-4/Lab-assignments/main/ASKR/Tata_Motors_Stock.csv", 
                 index_col = 0, parse_dates = True)
 
+
 for stock in [stock_tata]:
   stock = stock.drop(stock.columns[0], axis=1)#dropping pre open columns
   stock = stock.dropna()#dropping NaN valued rows
