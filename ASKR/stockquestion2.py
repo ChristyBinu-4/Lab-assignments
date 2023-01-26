@@ -17,9 +17,9 @@ def trend_Finder(stock):
   openValue = stock[(stockName, 'open')][0]
   closingValue = stock[(stockName, 'close')][dataLength - 1]
 
-  if openValue > closingValue :
+  if openValue < closingValue :
     return "Bullish trend"
-  elif closingValue > openValue:
+  elif closingValue < openValue:
     return "Bearish trend"
   else :
     return "neutral"
