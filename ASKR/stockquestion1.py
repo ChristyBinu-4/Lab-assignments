@@ -42,6 +42,8 @@ def findCandleWithMaxMove(dfResample):
   lowValues = dfResample[(stockName, 'low')]
 
   candleMovement = []
+  dataLength = len(dfResample.index)
+  
   for i in range(dataLength):
     candleMovement.append(highValues[i] - lowValues[i])
 
@@ -86,7 +88,7 @@ for stock in [stock_tata, stock_reliance]:
   print("The Timestamp of maximum value  stock is : ", timestampOfMaxValue)
   print("The Timestamp of minimum value  stock is : ", timestampOfMinValue, end='\n\n')
 
-  dataLength = len(dfResample.index)
+  
 
   #print the Candle with maximum movement
   maxMovedCandleDetails = findCandleWithMaxMove(dfResample)
