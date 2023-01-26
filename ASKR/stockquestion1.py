@@ -43,7 +43,7 @@ def findCandleWithMaxMove(dfResample):
 
   candleMovement = []
   dataLength = len(dfResample.index)
-  
+
   for i in range(dataLength):
     candleMovement.append(highValues[i] - lowValues[i])
 
