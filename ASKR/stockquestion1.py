@@ -1,6 +1,13 @@
-#Download the stock market data of any two script 
+#Question 1 : Download the stock market data of any two script datas from 
+#             Official website of Nse. Read 5 minute candle data from script 
+#             data and find following : 
+#
+#             i) The maximum and minimum values
+#             ii) Print the time stamp of maximum and minimum values
+#             iii) The candle with maximum movement
 
 import pandas as pd
+
 
 #function for finding Maximum and minimum values of stock
 def findMaxAndMin(dfResample):
@@ -12,6 +19,7 @@ def findMaxAndMin(dfResample):
   MinimumValue = lowValues.min()
 
   return MaximumValue, MinimumValue
+
 
 #function for finding Time stamps of Maximum and minimum values of stock
 def timeStampOfMaxMin(dfResample):
@@ -26,6 +34,8 @@ def timeStampOfMaxMin(dfResample):
 
   return timestampOfMaxValue, timestampOfMinValue
 
+
+#function for finding candle with maximum movements
 def findCandleWithMaxMove(dfResample):
   stockName = dfResample.columns[0][0]
   highValues = dfResample[(stockName, 'high')]
@@ -43,15 +53,23 @@ def findCandleWithMaxMove(dfResample):
 
   return maxMovedCandleDetails
 
+
+#importing stock data from my github page
 stock_tata = pd.read_csv("https://raw.githubusercontent.com/ChristyBinu-4/Lab-assignments/main/ASKR/Tata_Motors_Stock.csv", 
                 index_col = 0, parse_dates = True)
+stock_reliance = pd.read_csv("https://raw.githubusercontent.com/ChristyBinu-4/Lab-assignments/main/ASKR/Reliance_Stock.csv",
+                index_col = 0, parse_dates = True)
 
+#Using stock datas to find answers to above mentioned questions
+for stock in [stock_tata, stock_reliance]:
 
-for stock in [stock_tata]:
   stock = stock.drop(stock.columns[0], axis=1)#dropping pre open columns
   stock = stock.dropna()#dropping NaN valued rows
 
-  print("Name of stock : ", stock.columns[0])
+  print("\n","--------------------------------------------------------------------------------")
+
+  nameOfStock = str(stock.columns[0])[:-3]#Stripping last word EQN for printing name of stock
+  print("Name of stock : ", nameOfStock)
 
   date = str(stock.index[1])[0:11]
   print("Date : ", date, "\n")
@@ -73,3 +91,4 @@ for stock in [stock_tata]:
   #print the Candle with maximum movement
   maxMovedCandleDetails = findCandleWithMaxMove(dfResample)
   print("Candle with maximum movement is : ", maxMovedCandleDetails, sep='\n\n')
+  print("--------------------------------------------------------------------------------")
