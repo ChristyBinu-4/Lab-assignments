@@ -10,6 +10,10 @@ def MatrixMaker(rows, columns):
 rows = int(input("Enter the number of rows in Matrix : "))
 columns = int(input("Enter the number of columns in Matrix : "))
 
+if rows > 3 or columns > 3 :
+  print("Vectors can only have maximum elements of 3")
+  exit()
+
 column_2 = 1 #defining the columns in a vector space
 
 print(f"Enter the elements of the {rows} x {columns} matrix: ")
