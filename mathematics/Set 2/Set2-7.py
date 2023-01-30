@@ -1,6 +1,6 @@
 # Question 7:Find vector matrix multiplication 
 import numpy as np
-import sleep as s
+from time import sleep
 
 def MatrixMaker(rows, columns):
   a = [int(input("=>")) for i in range(rows * columns)]
@@ -12,8 +12,9 @@ rows = int(input("Enter the number of rows in Matrix : "))
 columns = int(input("Enter the number of columns in Matrix : "))
 
 if rows > 3 or columns > 3 :
+  sleep(2)
   print("Vectors can only have maximum elements of 3")
-  s.sleep(2)
+  sleep(2)
   print("Please rerun the program")
   exit()
 
