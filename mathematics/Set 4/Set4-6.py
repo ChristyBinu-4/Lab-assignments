@@ -8,10 +8,11 @@ while i == True :
         2. Upper Case
         3. Lower Case
         4. Capitalize 
-        5. Right Strip
-        6. Left Strip
+        5. Find string length
+        6. Replace
+        7. Index of specific word
 
-        7. Exit 
+        8. Exit 
   ''')
   choice = int(input())
   match(choice):
@@ -40,5 +41,26 @@ while i == True :
       print(f"Result : {a.capitalize()}")
       input("Press Enter to continue")
 
+    case 5 :
+      print("Length of the word\n")
+      a = input("Enter any characters : ")   
+      print(f"Result : {len(a)}")
+      input("Press Enter to continue")
+
+    case 6 :
+      print("Replacing word\n")
+      a = input("Enter any characters : ")
+      b = input("Enter the text to be changed : ")   
+      c = input("Enter the text to be replaced : ")   
+      print(f"Result of after replacing : {a.replace(b, c)}")
+      input("Press Enter to continue")
+
     case 7 :
+      print("Index of word\n")
+      a = input("Enter any characters : ")
+      b = input("Enter the text to find from above string : ")      
+      print(f"Your string is at position : {a.index(b)}")
+      input("Press Enter to continue")
+
+    case 8 :
       i = False
