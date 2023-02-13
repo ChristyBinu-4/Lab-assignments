@@ -1,3 +1,5 @@
+#Question 5: Divide two vectors using NumPy Arrays
+
 import numpy as np
 
 print("Enter the  values of first vector : ")

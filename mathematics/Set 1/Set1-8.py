@@ -1,3 +1,4 @@
+#Question 8: Calculate L1, L2, Max Norms of a vector.
 import numpy as np
 from numpy.linalg import norm
 from math import inf

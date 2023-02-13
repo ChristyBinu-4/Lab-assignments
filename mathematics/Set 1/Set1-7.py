@@ -1,3 +1,4 @@
+#Question 7: Perform vector Scalar Multiplication
 import numpy as np
 
 print("Enter the  values of first vector : ")

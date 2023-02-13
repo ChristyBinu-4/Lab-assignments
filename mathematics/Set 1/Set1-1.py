@@ -1,3 +1,4 @@
+#Question 1: Define a vector
 import numpy as np
 
 print("Enter the values of vector : ")

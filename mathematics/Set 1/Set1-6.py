@@ -1,3 +1,4 @@
+#Question 6: Find dot product of two vectors
 import numpy as np
 
 print("Enter the  values of first vector : ")
