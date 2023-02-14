@@ -20,5 +20,5 @@ for i in range(columns):
 transpose = np.array(transpose)
 transpose = transpose.reshape(columns,rows)
 
-print(matrix_1)
-print(transpose)
+print("Matrix :", matrix_1, sep="\n")
+print("Transpose of matrix :", transpose, sep="\n")

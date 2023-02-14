@@ -11,7 +11,7 @@ def MatrixMaker(rows, columns):
 rows = 3
 columns = 3
 
-print(f"Enter the elements of the first {rows}x{columns} matrix")
+print(f"Enter the elements of the {rows}x{columns} matrix")
 matrix_1 = MatrixMaker(rows, columns)
 
 # extracting vector and making diagonal matrix
