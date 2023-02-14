@@ -12,6 +12,9 @@ matrix_1 = [[int(input("=>")) for j in range(columns)] for i in range(rows)]
 print(f"Enter the elements of the second {columns} x {column_2} matrix")
 matrix_2 = [[int(input("=>")) for j in range(column_2)] for i in range(columns)]
 
+matrix_1 = np.array(matrix_1)
+matrix_2 = np.array(matrix_2)
+
 print("first Matrix \n",matrix_1)
 print("Second Matrix \n", matrix_2)
 
