@@ -1,3 +1,4 @@
+#Question 3: Calculate sparsity of matrix
 import numpy as np
 
 def sparcity0fMatrix(matrix):

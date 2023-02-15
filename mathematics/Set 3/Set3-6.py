@@ -1,3 +1,4 @@
+#Question 6: Define 5 * 2 matrix data set, split it into x and y components and plot dataset as scatterplot 
 import matplotlib.pyplot as plt
 import numpy as np
 
