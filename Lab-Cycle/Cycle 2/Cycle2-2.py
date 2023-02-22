@@ -4,7 +4,7 @@
 def DFS(graph, startVertex):
   queue, visited, traversalList = [startVertex], {}, []
   
-  for i in range(len(graph)):
+  for i in graph:
     visited.update({i:False})
 
   while queue:
@@ -14,12 +14,20 @@ def DFS(graph, startVertex):
     nodeIndex = 0 # It is used to avoid reversing of nodes in graph[vertex]
 
     for node in graph[vertex]:
-      if visited[node] is False and node not in queue: 
+      if visited[f"{node}"] is False and node not in queue: 
         queue.insert(nodeIndex,node)
         nodeIndex += 1
 
   return traversalList
 
 
-graph = { 0:[1, 2, 3], 1:[0, 2], 2:[0, 1, 4], 3:[0], 4:[2]}
-print(DFS(graph,2))
+graph = {
+  'A' : ['B', 'C'],
+  'B' : ['D', 'E'],
+  'C' : ['G'],
+  'D' : [],
+  'E' : ['F'],
+  'F' : [],
+  'G' : []
+}
+print(DFS(graph,'A'))

@@ -4,7 +4,7 @@
 def BFS(graph, startVertex):
   queue, visited, traversalList  = [startVertex], {}, []
   
-  for i in range(len(graph)):
+  for i in graph:
     visited.update({i:False})
 
   while queue:
