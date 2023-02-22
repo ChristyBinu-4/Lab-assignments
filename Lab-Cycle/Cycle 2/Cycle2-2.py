@@ -13,6 +13,7 @@ def DFS(graph, startVertex):
     traversalList.append(vertex)
     nodeIndex = 0 # It is used to avoid reversing of nodes in graph[vertex]
 
+    print(graph[vertex])
     for node in graph[vertex]:
       if visited[f"{node}"] is False and node not in queue: 
         queue.insert(nodeIndex,node)
