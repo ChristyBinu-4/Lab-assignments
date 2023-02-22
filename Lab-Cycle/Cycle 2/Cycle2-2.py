@@ -1,25 +1,13 @@
 #Question 8: Depth first search
 
 
-def DFS(graph, startVertex):
-  queue, visited, traversalList = [startVertex], {}, []
-  
-  for i in graph:
-    visited.update({i:False})
+def DFS(graph, currentNode):
 
-  while queue:
-    vertex = queue.pop(0)
-    visited[vertex] = True
-    traversalList.append(vertex)
-    nodeIndex = 0 # It is used to avoid reversing of nodes in graph[vertex]
-
-    print(graph[vertex])
-    for node in graph[vertex]:
-      if visited[f"{node}"] is False and node not in queue: 
-        queue.insert(nodeIndex,node)
-        nodeIndex += 1
-
-  return traversalList
+    print(currentNode, end=" ")
+    for node in graph[currentNode]:
+        if DFS(graph, node):
+            return True
+    return False
 
 
 graph = {
@@ -31,4 +19,5 @@ graph = {
   'F' : [],
   'G' : []
 }
-print(DFS(graph,'A'))
+
+DFS(graph,'A')

@@ -2,7 +2,7 @@
 
 
 def DFS(graph, currentNode, depth):
-    print(currentNode, end="->")
+    print(currentNode, end=" ")
     if depth > 0:
         for node in graph[currentNode]:
             if DFS(graph, node, depth - 1):
