@@ -16,8 +16,8 @@ patternIndex = 0
 stringIndex = 0 
 start = stringIndex
 
-while patternIndex < len(patternArray) and stringIndex < len(stringArray):  
-  
+while stringIndex < len(stringArray):  
+
   if stringArray[stringIndex] == patternArray[patternIndex] :
     stringIndex += 1
     patternIndex += 1
@@ -26,8 +26,11 @@ while patternIndex < len(patternArray) and stringIndex < len(stringArray):
     start = stringIndex
     patternIndex = 0
 
+# printing location of founded pattern
+  if patternIndex == len(patternArray):
+    print(f"\nGiven pattern found in string from position: \n{start} to {stringIndex - 1}")
+    patternIndex = 0
 
-if patternIndex == len(patternArray):
-  print(f"\nGiven pattern found in string from position: \n{start} to {stringIndex - 1}")
-else :
+
+if patternIndex == 0:
   print("\nGiven pattern is not found in the string")
