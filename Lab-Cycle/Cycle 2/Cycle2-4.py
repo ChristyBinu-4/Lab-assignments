@@ -1,21 +1,32 @@
 def uniformCostSearch(graph, cost, start, goal):
-  opened = []    
-  path = []
-  if goal == start:
-    return 'already in goal'
-  
-  opened.append((0, start, path))
+  opened = []
+  closed = []
 
-  while(opened) :
-    priority, current, path = opened.pop()
-    print(current, path)
-    if current == goal:
-      return path   
-    next = graph[current]
-    for state in next :
-        print(state)
+  opened.append((0, start))
   
+  while opened:
+    opened.sort(reverse=True)
+    selected_node = opened.pop()
+    
+    if selected_node[1] == goal:
+      return selected_node[1]
+    closed.append(selected_node)
+    new_nodes = graph[selected_node[1]]
 
+    if new_nodes:
+
+      for child in new_nodes:
+        costToChild = cost[(selected_node, child)]
+
+        if child not in (opened and closed):
+          opened.append((costToChild, child))
+        
+        # elif child in opened:
+        #   if child == opened[0][1]:
+        #     opened.append((costToChild, child))
+
+   
+    
 
 # create the graph
 cost = {}
