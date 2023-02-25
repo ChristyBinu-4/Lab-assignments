@@ -1,5 +1,3 @@
-from queue import PriorityQueue
-
 def uniformCostSearch(graph, cost, start, goal):
   opened = []    
   path = []
@@ -9,7 +7,7 @@ def uniformCostSearch(graph, cost, start, goal):
   opened.append((0, start, path))
 
   while(opened) :
-    cost, current, path = opened.pop()
+    priority, current, path = opened.pop()
     print(current, path)
     if current == goal:
       return path   
