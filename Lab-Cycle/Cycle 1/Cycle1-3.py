@@ -15,6 +15,7 @@ for j in pattern :
 patternIndex = 0
 stringIndex = 0 
 start = stringIndex
+flag = 0
 
 while stringIndex < len(stringArray):  
 
@@ -30,7 +31,8 @@ while stringIndex < len(stringArray):
   if patternIndex == len(patternArray):
     print(f"\nGiven pattern found in string from position: \n{start} to {stringIndex - 1}")
     patternIndex = 0
+    flag = 1
 
 
-if patternIndex == 0:
+if flag == 0:
   print("\nGiven pattern is not found in the string")
