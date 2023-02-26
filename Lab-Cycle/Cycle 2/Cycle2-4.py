@@ -38,11 +38,7 @@ def uniformCostSearch(graph, cost, start, goal):
             opened.append((costToChild + costOfselected_node, child))
         
 
-   
-    
-
 # create the graph
-
 
 # add edge
 graph = {
