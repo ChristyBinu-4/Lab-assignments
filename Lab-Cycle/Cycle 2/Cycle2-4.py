@@ -1,29 +1,38 @@
 def uniformCostSearch(graph, cost, start, goal):
   opened = []
   closed = []
-
+  path = []
+  costToChild = 0
   opened.append((0, start))
   
   while opened:
+
     opened.sort(reverse=True)
     selected_node = opened.pop()
+
+    nameOfselected_node = selected_node[1]
+    costOfselected_node = selected_node[0]
+
+    path.append(nameOfselected_node)
+
+    if nameOfselected_node == goal:
+      return path
     
-    if selected_node[1] == goal:
-      return selected_node[1]
     closed.append(selected_node)
-    new_nodes = graph[selected_node[1]]
+    new_nodes = graph[nameOfselected_node]
 
     if new_nodes:
-
+  
       for child in new_nodes:
-        costToChild = cost[(selected_node, child)]
+        costToChild = cost[(nameOfselected_node, child)]
 
         if child not in (opened and closed):
-          opened.append((costToChild, child))
+          opened.append((costToChild + costOfselected_node, child))
         
-        # elif child in opened:
-        #   if child == opened[0][1]:
-        #     opened.append((costToChild, child))
+        elif child in opened:
+          for i in range(len(opened)):
+            if child == opened[i]:
+              opened.append((costToChild, child))
 
    
     
@@ -55,4 +64,9 @@ cost[(5, 2)] = 6
 cost[(5, 'G')] = 3
 cost[('G', 4)] = 7
 
-print(uniformCostSearch(graph, cost, start='S', goal='G'))
+ucs = uniformCostSearch(graph, cost, start='S', goal='G')
+
+if ucs:
+  print("Goal node found....", "pathway :", sep="\n")
+  for i in ucs:
+    print(i, end=" ")
