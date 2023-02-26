@@ -49,26 +49,18 @@ def uniformCostSearch(graph, cost, start, goal):
 
 # add edge
 graph = {
-  'a' : ['b', 'c'],
-  'b' : ['c', 'd'],
-  'c' : ['b', 'd', 'e'],
-  'd' : ['e'],
-  'e' : ['d']
+  'Start' : ['A', 'Goal'],
+  'A' : ['Goal'],
+  'Goal' : []
   }
 # add the cost
 cost = {
-  ('a', 'b') : 6,
-  ('a', 'c') : 3,
-  ('b', 'c') : 1,
-  ('c', 'b') : 4,
-  ('b', 'd') : 2,
-  ('c', 'd') : 8,
-  ('c', 'e') : 2,
-  ('d', 'e') : 9,
-  ('e', 'd') : 7
+  ('Start', 'A') : 1,
+  ('Start', 'Goal') : 11,
+  ('A', 'Goal') : 12
 }
 
-ucs = uniformCostSearch(graph, cost, start='a', goal='d')
+ucs = uniformCostSearch(graph, cost, start='Start', goal='Goal')
 
 if ucs:
   print("Goal node found....", "pathway :", sep="\n")
