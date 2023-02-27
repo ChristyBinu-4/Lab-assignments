@@ -1,3 +1,5 @@
+#Question 10: Uniform cost search
+
 def uniformCostSearch(graph, cost, start, goal):
   opened = []
   closed = []
