@@ -1,0 +1,143 @@
+class BST:
+    # Creation of binary search tree
+    def _init_(self, value):
+        self.value = value
+        self.left = None
+        self.right = None
+
+
+# insertion of binary search tree
+def insert_node(root_node, node_value):
+    if root_node.value is None:
+        root_node.value = node_value
+    elif node_value <= root_node.value:
+        if root_node.left is None:
+            root_node.left = BST(node_value)
+        else:
+            insert_node(root_node.left, node_value)
+    else:
+        if root_node.right is None:
+            root_node.right = BST(node_value)
+        else:
+            insert_node(root_node.right, node_value)
+    return "the node has been successfully inserted"
+
+
+# pre-order traversal
+def pre_order_traversal(root_node):
+    if not root_node:
+        return
+    print(root_node.value)
+    pre_order_traversal(root_node.left)
+    pre_order_traversal(root_node.right)
+
+
+# in-order traversal
+def in_order_traversal(root_node):
+    if not root_node:
+        return
+    in_order_traversal(root_node.left)
+    print(root_node.value)
+    in_order_traversal(root_node.right)
+
+
+# post order traversal
+def post_order_traversal(root_node):
+    if not root_node:
+        return
+    post_order_traversal(root_node.left)
+    post_order_traversal(root_node.right)
+    print(root_node.value)
+
+
+# search for a particular element in BST
+def search_node(root_node, node_value):
+    if root_node is None:
+        return "False"
+    elif root_node.value == node_value:
+        return "true"
+    elif node_value < root_node.value:
+        search_node(root_node.left, node_value)
+    else:
+        search_node(root_node.right, node_value)
+
+
+# deletion in BST
+def minvalue(bst_node):
+    current_node = bst_node
+    while current_node.left is not None:
+        current_node = current_node.left
+    return current_node
+
+
+def delete_node(root_node, node_value):
+    if root_node is None:
+        return root_node
+    if node_value < root_node.value:
+        root_node.left = delete_node(root_node.left, node_value)
+    elif node_value > root_node.value:
+        root_node.right = delete_node(root_node.right, node_value)
+    else:
+        if root_node.left is None:
+            temp = root_node.right
+            root_node = None
+            return temp
+        if root_node.right is None:
+            temp = root_node.left
+            root_node = None
+            return temp
+        temp = minvalue(root_node.right)
+        root_node.value = temp.value
+        root_node.right = delete_node(root_node.right, temp.value)
+    return root_node
+
+
+# deleting entire binary search tree
+def deleteBST(root_node):
+    root_node.value = None
+    root_node.left = None
+    root_node.right = None
+    return "The entire BST has been deleted"
+
+
+new_BST = BST(None)
+print(insert_node(new_BST, 70))
+print(insert_node(new_BST, 50))
+print(insert_node(new_BST, 90))
+print(insert_node(new_BST, 30))
+print(insert_node(new_BST, 60))
+print(insert_node(new_BST, 80))
+print(insert_node(new_BST, 100))
+print(insert_node(new_BST, 20))
+print(insert_node(new_BST, 40))
+
+print("The pre order traversal is :")
+pre_order_traversal(new_BST)
+print("\n")
+
+print("The inorder traversal is :")
+in_order_traversal(new_BST)
+print("\n")
+
+print("The post order traversal is :")
+post_order_traversal(new_BST)
+print("\n")
+
+print("value checking")
+print(new_BST.value)
+print(new_BST.right.value)
+print(new_BST.left.value)
+print("\n")
+
+print("Searching for a node")
+if search_node(new_BST, 63):
+    print("item is found")
+else:
+    print("item is not found")
+print("\n")
+delete_node(new_BST, 60)
+pre_order_traversal(new_BST)
+
+print("\n")
+print(deleteBST(new_BST))
+pre_order_traversal(new_BST)

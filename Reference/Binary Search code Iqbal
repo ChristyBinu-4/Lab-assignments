@@ -1,0 +1,84 @@
+class BST:
+    # Creation of binary search tree
+    def _init_(self, value):
+        self.value = value
+        self.left = None
+        self.right = None
+
+
+# insertion of binary search tree
+def insert_node(root_node, node_value):
+    if root_node.value is None:
+        root_node.value = node_value
+    elif node_value <= root_node.value:
+        if root_node.left is None:
+            root_node.left = BST(node_value)
+        else:
+            insert_node(root_node.left, node_value)
+    else:
+        if root_node.right is None:
+            root_node.right = BST(node_value)
+        else:
+            insert_node(root_node.right, node_value)
+    return "the node has been successfully inserted"
+
+
+# in-order traversal
+def in_order_traversal(root_node):
+    if not root_node:
+        return
+    in_order_traversal(root_node.left)
+    print(root_node.value)
+    in_order_traversal(root_node.right)
+
+
+def delete_node(root_node, node_value):
+    if root_node is None:
+        return root_node
+    if node_value < root_node.value:
+        root_node.left = delete_node(root_node.left, node_value)
+    elif node_value > root_node.value:
+        root_node.right = delete_node(root_node.right, node_value)
+    else:
+        if root_node.left is None and root_node.right is None:
+            root_node = None
+        elif root_node.left is None:
+            temp = root_node.right
+            root_node = None
+            return temp
+        elif root_node.right is None:
+            temp = root_node.left
+            root_node = None
+            return temp
+        else:
+            successor = min_value_node(root_node.right)
+            root_node.value = successor.value
+            root_node.right = delete_node(root_node.right, successor.value)
+    return root_node
+
+
+def min_value_node(node):
+    current = node
+    while current.left is not None:
+        current = current.left
+    return current
+
+
+new_BST = BST(None)
+insert_node(new_BST, 70)
+insert_node(new_BST, 50)
+insert_node(new_BST, 90)
+insert_node(new_BST, 30)
+insert_node(new_BST, 60)
+insert_node(new_BST, 80)
+insert_node(new_BST, 100)
+insert_node(new_BST, 20)
+insert_node(new_BST, 40)
+
+print("The inorder traversal is :")
+in_order_traversal(new_BST)
+print("\n")
+
+print("The inorder successor after deletion is:")
+delete_node(new_BST, 40)
+in_order_traversal(new_BST)
