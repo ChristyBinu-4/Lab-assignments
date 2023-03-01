@@ -50,7 +50,7 @@ Enter any of the number below to perform following operations
         print("Deletion", end='\n\n')
         nodeValue = int(input("Enter the element to be deleted : "))
         
-        print(delete(r, nodeValue, Node).value)
+        delete(r, nodeValue, Node)
         
         input("\nPress enter to continue")
 
