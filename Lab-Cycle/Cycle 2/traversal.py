@@ -20,6 +20,6 @@ def preorder(root):
 # function to perform postorder traversal
 def postorder(root):
     if root:
-        print(root.value, end=" ")
         inorder(root.left)
         inorder(root.right)
+        print(root.value, end=" ")

@@ -3,8 +3,13 @@
 
 #function to perform insertion 
 def insert(root, key, Node):
-    if root is None:
-        return Node(key)
+    
+    if root is None :
+        return Node(key) 
+    
+    elif root.value == None:
+        root.value = key
+        
     else:
         if root.value == key:
             return root
@@ -46,7 +51,7 @@ def delete(root, key, Node):
     if root is None:
         return root
     
-    if root.value > key:
+    elif root.value > key:
         root.left = delete(root.left, key, Node)
     
     elif root.value < key:
