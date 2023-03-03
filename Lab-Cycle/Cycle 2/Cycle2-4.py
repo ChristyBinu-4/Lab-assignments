@@ -51,23 +51,47 @@ def uniformCostSearch(graph, cost, start, goal):
 
 # add edge
 graph = {
-  'Start' : ['A', 'Goal'],
-  'A' : ['Goal'],
-  'Goal' : []
+  0 : [1, 3],
+  1 : [6],
+  2 : [1], 
+  3 : [1, 2, 4],
+  4 : [2, 4],
+  5 : [2, 6],
+  6 : [4]
   }
 # add the cost
 cost = {
-  ('Start', 'A') : 1,
-  ('Start', 'Goal') : 11,
-  ('A', 'Goal') : 12
+    (0, 1) : 2,
+    (0, 3) : 5,
+    (1, 6) : 1,
+    (3, 1) : 5,
+    (3, 6) : 6,
+    (3, 4) : 2,
+    (2, 1) : 4,
+    (4, 2) : 4,
+    (4, 5) : 3,
+    (5, 2) : 6,
+    (5, 6) : 3,
+    (6, 4) : 7
 }
-
-ucs = uniformCostSearch(graph, cost, start='Start', goal='Goal')
+start = 0
+goal = 6
+ucs = uniformCostSearch(graph, cost, start, goal)
 
 print("Input graph and cost : ", graph)
 print("cost : ")
 
+for i in cost.keys():
+  print(i[0], " => ", i[1], " : ",  cost[i])
+
+
 if ucs:
-  print("Goal node found....", "pathway :", sep="\n")
-  print(ucs[0])
-  print("Cost of from source to destination = ", ucs[1])
+  print("\nGoal node found....", "pathway :", sep="\n\n")
+  lengthOfpathway = len(ucs[0]) - 1
+
+  for i in ucs[0]:
+    if i != ucs[0][lengthOfpathway]:  
+      print(i, end=" => ")
+    else:
+      print(i)
+  print(f"\nMinimum Cost of traversal from {start} to {goal} = ", ucs[1])

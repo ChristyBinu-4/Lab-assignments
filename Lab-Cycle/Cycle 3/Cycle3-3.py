@@ -7,7 +7,7 @@ def bestFirstSearch(graph, heuristics, start, goal):
   opened.append((heuristicsToGoal, start, []))
   
   while opened:
-
+  
     opened.sort(reverse=True)
     selected_node = opened.pop()
 
@@ -35,35 +35,38 @@ def bestFirstSearch(graph, heuristics, start, goal):
 
                 path = selected_node[2].copy()
                 path.append(nameOfselected_node)
+                heuristicsOfchild = heuristics[(child, goal)]
 
-                opened.append((heuristicsToGoal, child, path))
+                opened.append((heuristicsOfchild, child, path))
           
           if i < len(closed) and child in closed[i]:
             break 
         else:
             path = selected_node[2].copy()
             path.append(nameOfselected_node)
+            heuristicsOfchild = heuristics[(child, goal)]
 
-            opened.append((heuristicsToGoal, child, path))
+            opened.append((heuristicsOfchild, child, path))
         
 # create the graph
 
 # add edge
-graph = {
-  0 : [1, 2],
-  1 : [3, 4],
-  2 : [5, 6],
-  3 : [],
-  4 : [],
-  5 : [7],
-  6 : [8, 9],
-  7 : [],
-  8 : [],
-  9 : []
-  }
 
-goal = 9
+graph = {
+  0 : [1, 3],
+  1 : [6],
+  2 : [1], 
+  3 : [1, 2, 4, 6],
+  4 : [2, 4],
+  5 : [2, 6],
+  6 : [4]
+  }
+start = 0
+goal = 6
 heuristics = {}
+
+print("Best first Search")
+print("\ninput graph : ", graph,"\nStarting node : ", start, "\nGoal node : ", goal, "\n")
 
 #getting heuristics from user
 for i in graph.keys():
@@ -76,12 +79,16 @@ for i in graph.keys():
 
 
 
-best_first_search = bestFirstSearch(graph, heuristics, 0, goal)
+best_first_search = bestFirstSearch(graph, heuristics, start, goal)
+
 
 #printing path way
 if best_first_search:
   print("Goal node found....", "pathway :", sep="\n")
   for i in best_first_search:
-    print(i)
+    if i != best_first_search[len(best_first_search) - 1 ]:
+      print(i, end=' => ')
+    else:
+      print(i)
 else:
   print("Goal node not found")

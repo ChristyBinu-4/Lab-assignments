@@ -7,7 +7,7 @@ def beamSearch(graph, heuristics, start, goal, beam):
   opened.append((heuristicsToGoal, start, []))
   
   while opened:
-
+  
     opened.sort(reverse=True)
     selected_node = opened.pop()
 
@@ -35,39 +35,48 @@ def beamSearch(graph, heuristics, start, goal, beam):
 
                 path = selected_node[2].copy()
                 path.append(nameOfselected_node)
+                heuristicsOfchild = heuristics[(child, goal)]
 
-                opened.append((heuristicsToGoal, child, path))
+                opened.append((heuristicsOfchild, child, path))
           
           if i < len(closed) and child in closed[i]:
             break 
         else:
             path = selected_node[2].copy()
             path.append(nameOfselected_node)
+            heuristicsOfchild = heuristics[(child, goal)]
 
-            opened.append((heuristicsToGoal, child, path))
-      if len(opened) - 1 > beam :
-        for i in range(opened):
-          if i > beam :
-            opened.pop(i)
+            opened.append((heuristicsOfchild, child, path))
+           
+        opened.sort()
+
+        for i in range(len(opened)):
+          if len(opened) > beam : 
+            if i >= beam :
+              a = opened.pop(i)
+
+
         
 # create the graph
 
 # add edge
-graph = {
-  0 : [1, 2],
-  1 : [3, 4],
-  2 : [5, 6],
-  3 : [],
-  4 : [],
-  5 : [7],
-  6 : [8, 9],
-  7 : [],
-  8 : [],
-  9 : []
-  }
 
-goal = 9
+graph = {
+  0 : [1, 3],
+  1 : [6],
+  2 : [1], 
+  3 : [1, 2, 4, 6],
+  4 : [2, 4],
+  5 : [2, 6],
+  6 : [4]
+  }
+  
+start = 0
+goal = 6
 heuristics = {}
+
+print("Beam Search")
+print("\ninput graph : ", graph,"\nStarting node : ", start, "\nGoal node : ", goal, "\n")
 
 #getting heuristics from user
 for i in graph.keys():
@@ -80,12 +89,16 @@ for i in graph.keys():
 
 beam = int(input("Enter the beam width : "))
 
-beam_search = beamSearch(graph, heuristics, 0, goal, beam)
+beam_search = beamSearch(graph, heuristics, start, goal, beam)
 
 #printing path way
 if beam_search:
   print("Goal node found....", "pathway :", sep="\n")
+  lengthOfpathway = len(beam_search)
   for i in beam_search:
-    print(i)
+    if i != beam_search[lengthOfpathway - 1 ]:
+      print(i, end=' => ')
+    else:
+      print(i)
 else:
   print("Goal node not found")
