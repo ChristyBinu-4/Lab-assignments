@@ -65,18 +65,36 @@ graph = {
   0 : [1, 3],
   1 : [6],
   2 : [1], 
-  3 : [1, 2, 4, 6],
+  3 : [1, 4, 6],
   4 : [2, 4],
   5 : [2, 6],
   6 : [4]
   }
-  
+
+cost = {
+    (0, 1) : 2,
+    (0, 3) : 5,
+    (1, 6) : 1,
+    (3, 1) : 5,
+    (3, 6) : 6,
+    (3, 4) : 2,
+    (2, 1) : 4,
+    (4, 2) : 4,
+    (4, 5) : 3,
+    (5, 2) : 6,
+    (5, 6) : 3,
+    (6, 4) : 7
+}
 start = 0
 goal = 6
 heuristics = {}
 
 print("Beam Search")
 print("\ninput graph : ", graph,"\nStarting node : ", start, "\nGoal node : ", goal, "\n")
+
+print("\ncost : ")
+for i in cost.keys():
+  print(i[0], " => ", i[1], " : ",  cost[i])
 
 #getting heuristics from user
 for i in graph.keys():
@@ -91,14 +109,25 @@ beam = int(input("Enter the beam width : "))
 
 beam_search = beamSearch(graph, heuristics, start, goal, beam)
 
-#printing path way
+
 if beam_search:
-  print("Goal node found....", "pathway :", sep="\n")
+  #printing path way
+  print("\nGoal node found....", "\npathway :", sep="\n")
   lengthOfpathway = len(beam_search)
+
   for i in beam_search:
     if i != beam_search[lengthOfpathway - 1 ]:
       print(i, end=' => ')
     else:
       print(i)
+
+  #printing Cost for comparing with other search algorithm
+  total_cost = 0
+  print("\nCost of Traversal : ")
+  for i in range(1, len(beam_search)):
+    total_cost += cost[(beam_search[i-1], beam_search[i])]
+    
+  print(total_cost)
+
 else:
   print("Goal node not found")

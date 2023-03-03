@@ -108,11 +108,21 @@ for i in graph.keys():
 astar = a_star(graph, cost, heuristics,start, goal)
 
 if astar:
+
+  #printing path way
   print("\nGoal node found....", "\npathway :", sep="\n")
   for i in astar:
     if i != astar[len(astar) - 1 ]:
       print(i, end=' => ')
     else:
       print(i)
+
+  #printing Cost for comparing with other search algorithm
+  total_cost = 0
+  print("\nCost of Traversal : ")
+  for i in range(1, len(astar)):
+    total_cost += cost[(astar[i-1], astar[i])]
+    
+  print(total_cost)
 else:
   print("Goal node not found")

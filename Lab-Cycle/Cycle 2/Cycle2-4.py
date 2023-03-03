@@ -78,8 +78,8 @@ start = 0
 goal = 6
 ucs = uniformCostSearch(graph, cost, start, goal)
 
-print("Input graph and cost : ", graph)
-print("cost : ")
+print("\nInput graph and cost : ", graph)
+print("\ncost : ")
 
 for i in cost.keys():
   print(i[0], " => ", i[1], " : ",  cost[i])

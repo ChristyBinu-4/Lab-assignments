@@ -56,17 +56,37 @@ graph = {
   0 : [1, 3],
   1 : [6],
   2 : [1], 
-  3 : [1, 2, 4, 6],
+  3 : [1, 4, 6],
   4 : [2, 4],
   5 : [2, 6],
   6 : [4]
   }
+
+cost = {
+    (0, 1) : 2,
+    (0, 3) : 5,
+    (1, 6) : 1,
+    (3, 1) : 5,
+    (3, 6) : 6,
+    (3, 4) : 2,
+    (2, 1) : 4,
+    (4, 2) : 4,
+    (4, 5) : 3,
+    (5, 2) : 6,
+    (5, 6) : 3,
+    (6, 4) : 7
+}
+
 start = 0
 goal = 6
 heuristics = {}
 
 print("Best first Search")
 print("\ninput graph : ", graph,"\nStarting node : ", start, "\nGoal node : ", goal, "\n")
+
+print("\ncost : ")
+for i in cost.keys():
+  print(i[0], " => ", i[1], " : ",  cost[i])
 
 #getting heuristics from user
 for i in graph.keys():
@@ -82,13 +102,23 @@ for i in graph.keys():
 best_first_search = bestFirstSearch(graph, heuristics, start, goal)
 
 
-#printing path way
+
 if best_first_search:
-  print("Goal node found....", "pathway :", sep="\n")
+
+  #printing path way
+  print("\nGoal node found....", "\npathway :", sep="\n")
   for i in best_first_search:
     if i != best_first_search[len(best_first_search) - 1 ]:
       print(i, end=' => ')
     else:
       print(i)
+
+  #printing Cost for comparing with other search algorithm
+  total_cost = 0
+  print("\nCost of Traversal : ")
+  for i in range(1, len(best_first_search)):
+    total_cost += cost[(best_first_search[i-1], best_first_search[i])]
+    
+  print(total_cost)
 else:
   print("Goal node not found")
