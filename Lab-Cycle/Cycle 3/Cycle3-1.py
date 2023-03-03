@@ -1,4 +1,4 @@
-#Question 14: Beam search
+#Question 12: Beam search
 
 def beamSearch(graph, heuristics, start, goal, beam):
   opened = []
