@@ -1,6 +1,7 @@
-#Question 10: Uniform cost search
+#Question 13: A* search algorithm
 
-def uniformCostSearch(graph, cost, start, goal):
+
+def a_star(graph, cost, heuristics, start, goal):
   opened = []
   closed = []
   costToChild = 0
@@ -18,7 +19,7 @@ def uniformCostSearch(graph, cost, start, goal):
     if nameOfselected_node == goal:
       pathWayOfnode.append(nameOfselected_node)
 
-      return pathWayOfnode, costOfselected_node
+      return pathWayOfnode
     
     closed.append(selected_node)
     new_nodes = graph[nameOfselected_node]
@@ -27,24 +28,31 @@ def uniformCostSearch(graph, cost, start, goal):
     
       for child in new_nodes:
         costToChild = cost[(nameOfselected_node, child)]
+        costValue = costToChild + costOfselected_node
   
         for i in range(len(opened)):
           if child in opened[i] :
-              if costToChild + costOfselected_node < opened[i][0]:
+              if costValue < opened[i][0]:
                 opened.pop(i)
 
                 path = selected_node[2].copy()
                 path.append(nameOfselected_node)
+                heuristicsOfchild = heuristics[(child, goal)]
 
-                opened.append((costToChild + costOfselected_node, child, path))
+                functionValue = heuristicsOfchild + costValue
+
+                opened.append((functionValue, child, path))
           
           if i < len(closed) and child in closed[i]:
             break 
         else:
             path = selected_node[2].copy()
             path.append(nameOfselected_node)
+            heuristicsOfchild = heuristics[(child, goal)]
 
-            opened.append((costToChild + costOfselected_node, child, path))
+            functionValue = heuristicsOfchild + costValue
+
+            opened.append((functionValue, child, path))
         
 
 # create the graph
@@ -74,24 +82,37 @@ cost = {
     (5, 6) : 3,
     (6, 4) : 7
 }
+heuristics = {}
 start = 0
 goal = 6
-ucs = uniformCostSearch(graph, cost, start, goal)
 
-print("Input graph and cost : ", graph)
-print("cost : ")
+print("A* search Algorithm")
 
+print("\nInput graph and cost : ", graph)
+print("\ncost : ")
 for i in cost.keys():
   print(i[0], " => ", i[1], " : ",  cost[i])
 
 
-if ucs:
-  print("\nGoal node found....", "pathway :", sep="\n\n")
-  lengthOfpathway = len(ucs[0]) - 1
+#getting heuristics from user
+for i in graph.keys():
+  if i is not goal:
+    heuristicValue = int(input(f"Enter the heuristics from {i} to Goal : "))
+    heuristics[(i, goal)] = heuristicValue
+  else:
+    heuristicValue = 0
+    heuristics[(i, goal)] = heuristicValue
 
-  for i in ucs[0]:
-    if i != ucs[0][lengthOfpathway]:  
-      print(i, end=" => ")
+
+
+astar = a_star(graph, cost, heuristics,start, goal)
+
+if astar:
+  print("\nGoal node found....", "\npathway :", sep="\n")
+  for i in astar:
+    if i != astar[len(astar) - 1 ]:
+      print(i, end=' => ')
     else:
       print(i)
-  print(f"\nMinimum Cost of traversal from {start} to {goal} = ", ucs[1])
+else:
+  print("Goal node not found")
