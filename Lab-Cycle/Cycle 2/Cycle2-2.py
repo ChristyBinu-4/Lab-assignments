@@ -20,4 +20,6 @@ graph = {
   'G' : []
 }
 
-DFS(graph,'A')
+print("Input graph : ", graph)
+print("Depth first search :")
+DFS(graph, 'A')

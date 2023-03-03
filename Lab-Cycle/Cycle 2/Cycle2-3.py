@@ -27,4 +27,8 @@ graph = {
   'F' : [],
   'G' : []
 }
+
+
+print("Input graph : ", graph)
+print("Iterative Deepening Depth first search :")
 IDDFS(graph, 'A', 4)

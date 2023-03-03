@@ -64,6 +64,9 @@ cost = {
 
 ucs = uniformCostSearch(graph, cost, start='Start', goal='Goal')
 
+print("Input graph and cost : ", graph)
+print("cost : ")
+
 if ucs:
   print("Goal node found....", "pathway :", sep="\n")
   print(ucs[0])

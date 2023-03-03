@@ -13,6 +13,7 @@ def binarySearch(array, key):
       lastElement = middleElement - 1 
     elif array[middleElement] < key :
       firstElement = middleElement + 1
+  return
     
 #Inputing the elements in array
 length = int(input("Enter the Number of elements you want to input in an array : "))
@@ -20,8 +21,7 @@ print("Enter the elements in array")
 array = [int(input(">")) for i in range(length)]
 
 array = sorted(array)
-key = 54 #key is the element to be found from the array
-print("\n sorted array is ",array)
+key = int(input("Enter the element to be searched : "))
 
 searchResult = binarySearch(array, key) + 1 #adding 1 to make the postion of array start from 1
 

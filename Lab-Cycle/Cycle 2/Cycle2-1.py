@@ -20,4 +20,7 @@ def BFS(graph, startVertex):
 
 
 graph = { 0:[1, 2, 3], 1:[0, 2], 2:[0, 1, 4], 3:[0], 4:[2]}
-print(BFS(graph,2))
+print("Input graph : ", graph)
+print("Breadth first search :")
+for i in BFS(graph,2):
+  print(i, end=" ")
