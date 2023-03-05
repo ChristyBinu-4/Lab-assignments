@@ -23,9 +23,11 @@ columns = int(input("Enter the number of columns : "))
 print("Enter elements in matrix : ")
 matrix = [[int(input("=>")) for j in range(columns)] for i in range(rows)]
 matrix = np.array(matrix)
+print(matrix)
 
 sparcity = sparcity0fMatrix(matrix)
 print("\nSparcity of given matrix is : ", sparcity)
+
 
 if sparcity > 0.5 :
   print("The given Matrix is a sparse matrix")
