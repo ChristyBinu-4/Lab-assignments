@@ -1,6 +1,6 @@
 from nltk import word_tokenize
 
-text = open(r"C:\Users\91703\Documents\PG docs\Lab-assignments\2nd Sem\NLP\aliceInWonderLand.txt")
+text = open(r"2nd Sem\NLP\aliceInWonderLand.txt")
 textString = ""
 
 for i in text:
