@@ -17,4 +17,4 @@ for i in text_tokenized:
     token_list[i] += 1
 
 for word in token_list:
-  print('{:<13} '.format(word))
+  print('{:<13}  {:<12} '.format(word, token_list[word]))
