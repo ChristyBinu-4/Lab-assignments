@@ -1,2 +1,3 @@
 Open gitbash through command - "C:\Program files\Git\bin\sh.exe"
 Git add, commit, push in one command - git add . && git commit -m "commit message" && git push remote branch
+Copy a file through command prompt - copy [source file path] [destination file path]
