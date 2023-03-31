@@ -12,8 +12,6 @@ for i in data:
     if i not in encoded:
         count += 1
         encoded[i] = count
-    else:
-        continue
     
 oneHotEncoding = []
 print("One Hot encoding of text")
