@@ -11,7 +11,7 @@ customDictionary = {
     'IMO': 'In my opinion'
 }
 
-text = "Please call me ASAP"
+text = input("Enter any text: ")
 tokenized_text = word_tokenize(text)
 
 textString = " "
@@ -21,4 +21,4 @@ for word in tokenized_text:
     else:
         textString += word +" "
 
-print(textString)
+print("The standardized form of given text: ", textString, sep="\n")

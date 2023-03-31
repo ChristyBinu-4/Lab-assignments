@@ -13,7 +13,7 @@ def generate_ngram(text, ngram):
 text = 'this is a very good book to study'
 print("Given text:",text,sep="\n", end="\n\n")
 
-n = 2
+n = int(input("Enter n value : "))
 
 if n == 0:
     print("\nN must be greater than 0\n")
