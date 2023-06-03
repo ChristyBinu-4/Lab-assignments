@@ -10,9 +10,6 @@ iris = iris[["Petal.Width", "Petal.Length"]]
 x = iris['Petal.Length']
 y = iris['Petal.Width']
 
-plt.scatter(x, y)
-plt.xlabel('petal length')
-plt.ylabel('petal width')
 
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size= 0.4, random_state= 23)
 
@@ -26,5 +23,19 @@ c = lr.intercept_
 m = lr.coef_
 
 y_pred_train = m * x_train + c
+y_pred_train.flatten()
 
-print(y_pred_train)
+plt.scatter(x_train, y_train)
+plt.xlabel('petal length')
+plt.ylabel('petal width')
+plt.plot(x_train, y_pred_train, color = 'red')
+plt.show()
+
+y_pred_test = m * x_test + c
+y_pred_test.flatten()
+
+plt.scatter(x_test, y_test)
+plt.xlabel('petal length')
+plt.ylabel('petal width')
+plt.plot(x_test, y_pred_test, color = 'red')
+plt.show()
