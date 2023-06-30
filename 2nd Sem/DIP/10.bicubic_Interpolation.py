@@ -24,5 +24,5 @@ cv2.imshow("original",img)
 cv2.waitKey(10000)
 
 
-cv2.imshow("NNI", new_image)
+cv2.imshow("Bicubic interpolation", new_image)
 cv2.waitKey(10000)
