@@ -1,0 +1,1 @@
+https://medium.com/technology-through-the-prism/implementation-of-logistic-regression-without-using-built-in-library-90e2afffa137
