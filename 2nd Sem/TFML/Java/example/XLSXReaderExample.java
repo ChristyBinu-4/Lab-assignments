@@ -11,7 +11,7 @@ public class XLSXReaderExample
     {  
         try  
         {  
-            File file = new File("path/to/xlsxfile.xlsx");   //creating a new file instance  
+            File file = new File("C:\Users\CHRISTY BINU\Desktop\Lab-assignments\2nd Sem\TFML\Datasets\Power Plant.xlsx");   //creating a new file instance  
             FileInputStream fis = new FileInputStream(file);   //obtaining bytes from the file  
             //creating Workbook instance that refers to .xlsx file  
             XSSFWorkbook wb = new XSSFWorkbook(fis);   
