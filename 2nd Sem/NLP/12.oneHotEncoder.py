@@ -1,30 +1,16 @@
 from nltk import word_tokenize
 
-text = 'this is a very good book to study'
-print("Input text: ", text, "\n")
+text = ['this is a very good book to study',
+        'This is second sentence',
+        'This is third sentence']
 
-data = word_tokenize(text)
+#print("Input text: ", text, "\n")
 
-encoded = {}
-count = -1
+data = []
+for sentence in text :
+    sentenceTokens = word_tokenize(sentence)
+    for word in sentenceTokens:
+        if word not in  data:
+            data.append(word)
 
-for i in data:
-    if i not in encoded:
-        count += 1
-        encoded[i] = count
-    
-oneHotEncoding = []
-print("One Hot encoding of text")
-
-
-for i in data:
-    array = []
-    for j in encoded:
-        if i == j:
-            array.append(1)
-        else:
-            array.append(0)
-    oneHotEncoding.append(array)
-
-for i,j  in zip(oneHotEncoding,data):
-    print(f'{j}\t{i}')
+print(data)            
