@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression 
 from sklearn.metrics import mean_squared_error, r2_score
 
-df = pd. read_excel('/home/christy/Documents/Myself/Academia/PG docs/Lab-assignments/2nd Sem/TFML/Datasets/Power Plant.xlsx')
+df = pd. read_excel('2nd Sem\ML_Lab\Datasets\Power Plant.xlsx')
 
 x = df[['AT', 'V', 'AP', 'RH']]
 y = df['PE']
