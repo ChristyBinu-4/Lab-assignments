@@ -1,16 +1,20 @@
-from nltk import word_tokenize
+from sklearn.feature_extraction.text import CountVectorizer
 
 text = ['this is a very good book to study',
         'This is second sentence',
         'This is third sentence']
 
-#print("Input text: ", text, "\n")
+# Initialize CountVectorizer to perform one-hot encoding
+vectorizer = CountVectorizer(binary=True)
 
-data = []
-for sentence in text :
-    sentenceTokens = word_tokenize(sentence)
-    for word in sentenceTokens:
-        if word not in  data:
-            data.append(word)
+# Fit and transform the text data
+one_hot_encoded = vectorizer.fit_transform(text)
 
-print(data)            
+# Get the feature names (unique words)
+feature_names = vectorizer.get_feature_names_out()
+
+# Display the one-hot encoded vectors and feature names
+print("One-hot encoded vectors:")
+print(one_hot_encoded.toarray())
+print("\nFeature names:")
+print(feature_names)

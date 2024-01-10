@@ -1,7 +1,7 @@
 from textblob import TextBlob
 
 
-text = open(r"2nd Sem\NLP\alicespellingMistake.txt")
+text = open("alicespellingMistake.txt")
 textString = ""
 
 for i in text:

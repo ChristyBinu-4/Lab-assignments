@@ -1,9 +1,12 @@
 from nltk.corpus import stopwords
 from nltk import word_tokenize
 
+import nltk
+nltk.download('stopwords')
+
 stopWords = stopwords.words('english')
 
-text = open(r"2nd Sem\NLP\aliceInWonderLand.txt")
+text = open("aliceInWonderLand.txt")
 text = text.read()
 
 tokenized_text = word_tokenize(text)

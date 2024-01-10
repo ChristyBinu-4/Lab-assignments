@@ -1,6 +1,9 @@
 from nltk import word_tokenize
 from nltk.tag import pos_tag
 
+import nltk
+nltk.download('averaged_perceptron_tagger')
+
 pos_dict = {
 'CC': 'coordinating conjunction',
 'CD': 'cardinal digit', 
@@ -39,7 +42,7 @@ pos_dict = {
 'WRB': 'wh-adverb'
 }
 
-text = open(r"2nd Sem\NLP\aliceInWonderLand.txt")
+text = open("aliceInWonderLand.txt")
 text = text.read()
 
 tokenized_text = word_tokenize(text)

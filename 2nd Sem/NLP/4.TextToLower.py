@@ -1,4 +1,4 @@
-text = open(r"2nd Sem\NLP\aliceInWonderLand.txt")
+text = open("aliceInWonderLand.txt")
 text = text.read()
 
 textString = text.lower()
