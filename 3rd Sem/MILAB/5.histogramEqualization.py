@@ -4,25 +4,13 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 path = "test1.png"
-img = cv.imread(path, 0)  # Read the image as grayscale
+img = cv.imread(path)
 
-# Calculate histogram
-hist, bins = np.histogram(img.flatten(), 256, [0, 256])
-cdf = hist.cumsum()
-cdf_normalized = cdf * float(hist.max()) / cdf.max()
 
-# Plot histogram and CDF
-plt.plot(cdf_normalized, color='b')
-plt.hist(img.flatten(), 256, [0, 256], color='r')
-plt.xlim([0, 256])
-plt.legend(('cdf', 'histogram'), loc='upper left')
-plt.show()
 
-# Perform histogram equalization
-equ = cv.equalizeHist(img)
+equ = cv.equalizeHist(cv.cvtColor(img, cv.COLOR_BGR2GRAY))
 
-# Display the equalized image using OpenCV
-cv.imshow('Original Image', img)
-cv.imshow('Equalized Image', equ)
+cv.imshow("image",cv.cvtColor(img, cv.COLOR_BGR2GRAY))
+cv.imshow("equalised", equ)
 cv.waitKey(0)
 cv.destroyAllWindows()
