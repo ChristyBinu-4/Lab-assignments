@@ -16,7 +16,7 @@ def wiener_filter(image, kernel, noise_var):
     return np.uint8(np.clip(restored_image, 0, 255))
 
 # Read the blurred and noisy image
-image_path = "LAB\Machine ntelligence\Cycle-1\converted_image.jpg"
+image_path = "converted_image.jpg"
 blurred_noisy_image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
 
 # Simulate a known kernel (for demonstration purposes)
