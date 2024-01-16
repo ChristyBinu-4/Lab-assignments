@@ -3,7 +3,6 @@ from PIL import Image
 import matplotlib.pyplot as plt
 
 def display_rgb_channels(image_path):
-    # Open the image
     img = Image.open(image_path)
     
     # Convert the image to RGB mode if it's not already in RGB
