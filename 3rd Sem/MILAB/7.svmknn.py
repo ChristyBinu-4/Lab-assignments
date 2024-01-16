@@ -21,22 +21,15 @@ svm_classifier = SVC(kernel='linear')  # You can experiment with different kerne
 
 # Train the SVM classifier
 svm_classifier.fit(x_train, y_train)
-
-# Predict using the trained SVM classifier
 svm_predictions = svm_classifier.predict(x_test)
-
 svm_accuracy = accuracy_score(y_test, svm_predictions)
 
 
 # Create a KNN classifier
 knn_classifier = KNeighborsClassifier(n_neighbors=5)  # You can experiment with different values of k
 
-# Train the KNN classifier
 knn_classifier.fit(x_train, y_train)
-
-# Predict using the trained KNN classifier
 knn_predictions = knn_classifier.predict(x_test)
-
 knn_accuracy = accuracy_score(y_test, knn_predictions)
 
 print("SVM Accuracy:", svm_accuracy)

@@ -1,51 +1,37 @@
 #10. Implement any image restoration algorithm
 
 import cv2
-import numpy as np
-import matplotlib.pyplot as plt
+import numpy
+from PIL import Image
 
-def wiener_filter(image, kernel, noise_var):
-    # Perform Wiener deconvolution
-    fft_image = np.fft.fft2(image)
-    fft_kernel = np.fft.fft2(kernel, s=image.shape)
-    
-    # Wiener filter formula
-    wiener_filter = np.conj(fft_kernel) / (np.abs(fft_kernel)**2 + noise_var)
-    
-    restored_image = np.fft.ifft2(fft_image * wiener_filter).real
-    return np.uint8(np.clip(restored_image, 0, 255))
+def median_filter(data, filter_size):
+    temp = []
+    indexer = filter_size // 2
+    data_final = []
+    data_final = numpy.zeros((len(data),len(data[0])))
+    for i in range(len(data)):
 
-# Read the blurred and noisy image
-image_path = "converted_image.jpg"
-blurred_noisy_image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
+        for j in range(len(data[0])):
 
-# Simulate a known kernel (for demonstration purposes)
-kernel_size = 5
-kernel = np.ones((kernel_size, kernel_size), np.float32) / (kernel_size**2)
+            for z in range(filter_size):
+                if i + z - indexer < 0 or i + z - indexer > len(data) - 1:
+                    for c in range(filter_size):
+                        temp.append(0)
+                else:
+                    if j + z - indexer < 0 or j + indexer > len(data[0]) - 1:
+                        temp.append(0)
+                    else:
+                        for k in range(filter_size):
+                            temp.append(data[i + z - indexer][j + k - indexer])
 
-# Simulate known noise variance (for demonstration purposes)
-noise_var = 25.0
+            temp.sort()
+            data_final[i][j] = temp[len(temp) // 2]
+            temp = []
+    return data_final
 
-# Perform Wiener deconvolution
-restored_image = wiener_filter(blurred_noisy_image, kernel, noise_var)
+img = Image.open("test2.png").convert("L")
+arr = numpy.array(img)
+removed_noise = median_filter(arr, 3) 
+img = Image.fromarray(removed_noise)
 
-# Display the results
-plt.figure(figsize=(10, 4))
-
-plt.subplot(1, 3, 1)
-plt.imshow(blurred_noisy_image, cmap='gray')
-plt.title('Blurred and Noisy Image')
-plt.axis('off')
-
-plt.subplot(1, 3, 2)
-plt.imshow(kernel, cmap='gray')
-plt.title('Blur Kernel')
-plt.axis('off')
-
-plt.subplot(1, 3, 3)
-plt.imshow(restored_image, cmap='gray')
-plt.title('Restored Image (Wiener Filter)')
-plt.axis('off')
-
-plt.tight_layout()
-plt.show()
+img.show()
