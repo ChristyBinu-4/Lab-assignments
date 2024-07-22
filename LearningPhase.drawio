@@ -1,9 +1,63 @@
-<mxfile host="app.diagrams.net" modified="2024-07-22T11:00:54.761Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" version="24.7.1" etag="zOIJEtWl40Wi4TK7lEdo" type="github">
+<mxfile host="app.diagrams.net" modified="2024-07-22T11:07:06.487Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="GX1FnOVk5dxsIGqUD6cQ" version="24.7.1" type="github">
   <diagram name="Page-1" id="jKN-ir5nlZROyzEBMy9K">
-    <mxGraphModel>
+    <mxGraphModel dx="1434" dy="752" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="XNvJw6pzslVSsApbo8Ck-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="200" width="280" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="XNvJw6pzslVSsApbo8Ck-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="XNvJw6pzslVSsApbo8Ck-3" target="XNvJw6pzslVSsApbo8Ck-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XNvJw6pzslVSsApbo8Ck-3" value="Team performance extraction" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="230" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XNvJw6pzslVSsApbo8Ck-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="XNvJw6pzslVSsApbo8Ck-4" target="XNvJw6pzslVSsApbo8Ck-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XNvJw6pzslVSsApbo8Ck-4" value="Role detector learning using&amp;nbsp;&lt;div&gt;fuzzy c-means&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="320" width="90" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XNvJw6pzslVSsApbo8Ck-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="XNvJw6pzslVSsApbo8Ck-6" target="XNvJw6pzslVSsApbo8Ck-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XNvJw6pzslVSsApbo8Ck-6" value="Center of performance extraction" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="230" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XNvJw6pzslVSsApbo8Ck-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="XNvJw6pzslVSsApbo8Ck-7" target="XNvJw6pzslVSsApbo8Ck-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XNvJw6pzslVSsApbo8Ck-7" value="Feature weighting using Linear&lt;br&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;SVM&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="320" width="90" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XNvJw6pzslVSsApbo8Ck-8" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="XNvJw6pzslVSsApbo8Ck-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="170" y="200" as="sourcePoint" />
+            <mxPoint x="220" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XNvJw6pzslVSsApbo8Ck-9" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="XNvJw6pzslVSsApbo8Ck-1" target="XNvJw6pzslVSsApbo8Ck-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="410" as="sourcePoint" />
+            <mxPoint x="450" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XNvJw6pzslVSsApbo8Ck-11" value="Soccer logs" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="127" y="50" width="85" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XNvJw6pzslVSsApbo8Ck-14" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.475;entryY=-0.005;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="169.5" y="130" as="sourcePoint" />
+            <mxPoint x="170" y="198.89999999999998" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XNvJw6pzslVSsApbo8Ck-16" value="Role detector" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="52.5" y="445" width="85" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XNvJw6pzslVSsApbo8Ck-18" value="Weights of the feature" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="193" y="445" width="85" height="60" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
