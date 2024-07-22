@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-07-22T09:20:52.938Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="ohxTFck8bRR3YMHbhAmF" version="24.7.1" type="github">
+<mxfile host="app.diagrams.net" modified="2024-07-22T09:23:00.514Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="ip6FKPub6UBaqRVN-EhE" version="24.7.1" type="github">
   <diagram name="Page-1" id="ZjyivyVlpVMR8Z6ZtWU3">
     <mxGraphModel dx="1434" dy="752" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -84,7 +84,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="9dfFhnOsKdxjVdMtk8yv-27" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="185" y="540" width="240" height="200" as="geometry" />
+          <mxGeometry x="185" y="536.25" width="240" height="200" as="geometry" />
         </mxCell>
         <mxCell id="9dfFhnOsKdxjVdMtk8yv-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="9dfFhnOsKdxjVdMtk8yv-28" target="9dfFhnOsKdxjVdMtk8yv-27">
           <mxGeometry relative="1" as="geometry" />
@@ -130,6 +130,15 @@
         </mxCell>
         <mxCell id="9dfFhnOsKdxjVdMtk8yv-45" value="Suggested team for match against opponent" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="690" y="643.75" width="120" height="92.5" as="geometry" />
+        </mxCell>
+        <mxCell id="9dfFhnOsKdxjVdMtk8yv-48" value="Learning phase" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="170" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="9dfFhnOsKdxjVdMtk8yv-49" value="Rating phase" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="590" y="170" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="9dfFhnOsKdxjVdMtk8yv-50" value="Ranking phase" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="251" y="506" width="90" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
