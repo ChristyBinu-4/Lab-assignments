@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-07-22T09:23:00.514Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="ip6FKPub6UBaqRVN-EhE" version="24.7.1" type="github">
+<mxfile host="app.diagrams.net" modified="2024-07-22T09:26:20.295Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="K4nqjy4cCzKhVrteUuwX" version="24.7.1" type="github">
   <diagram name="Page-1" id="ZjyivyVlpVMR8Z6ZtWU3">
     <mxGraphModel dx="1434" dy="752" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -83,9 +83,6 @@
             <mxPoint x="450" y="360" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="9dfFhnOsKdxjVdMtk8yv-27" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="185" y="536.25" width="240" height="200" as="geometry" />
-        </mxCell>
         <mxCell id="9dfFhnOsKdxjVdMtk8yv-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="9dfFhnOsKdxjVdMtk8yv-28" target="9dfFhnOsKdxjVdMtk8yv-27">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -95,23 +92,8 @@
         <mxCell id="9dfFhnOsKdxjVdMtk8yv-30" value="Player performance rating based on set of matches" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="517.5" y="445" width="135" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="9dfFhnOsKdxjVdMtk8yv-32" value="Ranks of the players" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="245" y="660" width="120" height="60" as="geometry" />
-        </mxCell>
         <mxCell id="9dfFhnOsKdxjVdMtk8yv-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.688;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="9dfFhnOsKdxjVdMtk8yv-30" target="9dfFhnOsKdxjVdMtk8yv-27">
           <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="9dfFhnOsKdxjVdMtk8yv-36" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="9dfFhnOsKdxjVdMtk8yv-35" target="9dfFhnOsKdxjVdMtk8yv-32">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="9dfFhnOsKdxjVdMtk8yv-35" value="Roles of players" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="200" y="560" width="100" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="9dfFhnOsKdxjVdMtk8yv-38" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="9dfFhnOsKdxjVdMtk8yv-37" target="9dfFhnOsKdxjVdMtk8yv-32">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="9dfFhnOsKdxjVdMtk8yv-37" value="Player rating" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="310" y="560" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="9dfFhnOsKdxjVdMtk8yv-41" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="9dfFhnOsKdxjVdMtk8yv-32" target="9dfFhnOsKdxjVdMtk8yv-43">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -119,17 +101,17 @@
             <mxPoint x="480" y="690.25" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="9dfFhnOsKdxjVdMtk8yv-42" value="Ratings" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="374" y="666" width="60" height="30" as="geometry" />
+        <mxCell id="9dfFhnOsKdxjVdMtk8yv-42" value="Ratings based on roles" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="330" y="656" width="80" height="30" as="geometry" />
         </mxCell>
         <mxCell id="9dfFhnOsKdxjVdMtk8yv-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="9dfFhnOsKdxjVdMtk8yv-43" target="9dfFhnOsKdxjVdMtk8yv-45">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="9dfFhnOsKdxjVdMtk8yv-43" value="Selecting best players from team based on opponent ratings" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="510" y="645" width="131.25" height="90" as="geometry" />
+          <mxGeometry x="408.75" y="645" width="131.25" height="90" as="geometry" />
         </mxCell>
         <mxCell id="9dfFhnOsKdxjVdMtk8yv-45" value="Suggested team for match against opponent" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="690" y="643.75" width="120" height="92.5" as="geometry" />
+          <mxGeometry x="580" y="643.5" width="120" height="92.5" as="geometry" />
         </mxCell>
         <mxCell id="9dfFhnOsKdxjVdMtk8yv-48" value="Learning phase" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="30" y="170" width="100" height="30" as="geometry" />
@@ -138,7 +120,28 @@
           <mxGeometry x="590" y="170" width="80" height="30" as="geometry" />
         </mxCell>
         <mxCell id="9dfFhnOsKdxjVdMtk8yv-50" value="Ranking phase" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="251" y="506" width="90" height="30" as="geometry" />
+          <mxGeometry x="160" y="505" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="9dfFhnOsKdxjVdMtk8yv-51" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="90" y="535" width="240" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="9dfFhnOsKdxjVdMtk8yv-27" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="9dfFhnOsKdxjVdMtk8yv-51">
+          <mxGeometry width="240" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="9dfFhnOsKdxjVdMtk8yv-32" value="Ranks of the players" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="9dfFhnOsKdxjVdMtk8yv-51">
+          <mxGeometry x="60" y="123.75" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9dfFhnOsKdxjVdMtk8yv-36" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="9dfFhnOsKdxjVdMtk8yv-51" source="9dfFhnOsKdxjVdMtk8yv-35" target="9dfFhnOsKdxjVdMtk8yv-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9dfFhnOsKdxjVdMtk8yv-35" value="Roles of players" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="9dfFhnOsKdxjVdMtk8yv-51">
+          <mxGeometry x="15" y="23.75" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="9dfFhnOsKdxjVdMtk8yv-38" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="9dfFhnOsKdxjVdMtk8yv-51" source="9dfFhnOsKdxjVdMtk8yv-37" target="9dfFhnOsKdxjVdMtk8yv-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9dfFhnOsKdxjVdMtk8yv-37" value="Player rating" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="9dfFhnOsKdxjVdMtk8yv-51">
+          <mxGeometry x="125" y="23.75" width="100" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
